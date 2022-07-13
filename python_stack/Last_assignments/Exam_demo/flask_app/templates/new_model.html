@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>new</title>
+</head>
+<body>
+<div class="container">
+    <h1>Add a User</h1>
+    <p class="text-right"><a href="/">Home</a></p>
+    <form action="/create/model" method="post">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" placeholder="first name" name="param1"> 
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" placeholder="last name" name="param2"> 
+    </div>
+    <div class="form-group">
+        <input type="hidden" name="user_id" value="{{session['user_id']}}">
+        <label>First Name</label>
+        <input type="text" class="form-control" placeholder="email" name="param3"> 
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" value="password" name="password">
+    </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

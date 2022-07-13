@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+D:\Coding bootcamp apps and more\STS_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\358227787.index
+\SessionPost\src\main\java
+D:\Coding bootcamp apps and more\STS_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1957203185.index
+\OmikujiForm\src\main\java
+D:\Coding bootcamp apps and more\STS_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3138120694.index
+\SessionPost\src\main\java
+D:\Coding bootcamp apps and more\STS_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3926107246.index
+\FruityLoops\src\main\java

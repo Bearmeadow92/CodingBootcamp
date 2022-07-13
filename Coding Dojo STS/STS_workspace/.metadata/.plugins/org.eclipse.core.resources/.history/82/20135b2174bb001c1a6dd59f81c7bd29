@@ -1,0 +1,5 @@
+package com.jessefletchers.book.models;
+
+public class Book {
+
+}

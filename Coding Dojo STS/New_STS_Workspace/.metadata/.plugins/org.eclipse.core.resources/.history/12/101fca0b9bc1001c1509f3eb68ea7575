@@ -1,0 +1,14 @@
+package com.jesse.yogacourse.repositories;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface YogaRepository extends CrudRepository<Course, Long> {
+  	List<Course> findAll();
+	  }
+
+	
+	
+	

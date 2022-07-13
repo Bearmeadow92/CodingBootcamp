@@ -1,0 +1,5 @@
+package com.jesse.yogacourse.services;
+
+public class UserSevice {
+
+}

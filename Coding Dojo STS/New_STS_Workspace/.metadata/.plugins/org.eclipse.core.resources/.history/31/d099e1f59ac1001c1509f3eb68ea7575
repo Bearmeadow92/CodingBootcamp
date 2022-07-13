@@ -1,0 +1,9 @@
+package com.jesse.yogacourse.repositories;
+@Repository
+public interface YogaRepository extends YogaRepository<Course, Long> {
+  	List<Course> findAll();
+	  }
+
+	
+	
+	

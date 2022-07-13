@@ -1,0 +1,53 @@
+package com.jessefletcher.omikujiform.controllers;
+
+	import javax.servlet.http.HttpSession;
+
+	import org.springframework.stereotype.Controller;
+	import org.springframework.web.bind.annotation.RequestMapping;
+	import org.springframework.web.bind.annotation.RequestMethod;
+	import org.springframework.web.bind.annotation.RequestParam;
+
+	@Controller
+	@RequestMapping("/")
+	public class MainController {
+
+	    // REDERING FORM
+	    @RequestMapping("")
+	    public String index() {
+	        return "form.jsp";
+	    }
+
+
+//	    // ACCEPT THE FORM INFO
+	    @RequestMapping(value="/result", method=RequestMethod.POST)
+//	    @PostMapping("/process")
+	    public String result(
+	        @RequestParam(value="num") String numParam,
+	        @RequestParam(value="city") String cityParam,
+	        @RequestParam(value="name") String nameParam, 
+	        @RequestParam(value="hobby") String hobbyParam,
+	        @RequestParam(value="organism") String orgParam, 
+	        @RequestParam(value="nice") String niceParam, 
+	        HttpSession session
+	    ) {
+	        session.setAttribute("num", numParam);
+	        session.setAttribute("city", cityParam);
+	        session.setAttribute("name", nameParam);
+	        session.setAttribute("hobby", hobbyParam);
+	        session.setAttribute("organism", orgParam);
+	        session.setAttribute("nice", niceParam);
+	        System.out.println(cityParam);
+	        System.out.println(nameParam);
+	        System.out.println(hobbyParam);
+	        System.out.println(orgParam);
+	        System.out.println(niceParam);
+	        return "redirect:/result";
+	    }
+	    @RequestMapping("/result")
+	    public String result() {
+	        return "show.jsp";
+	    }
+	}
+	
+	
+	

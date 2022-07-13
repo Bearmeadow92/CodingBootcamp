@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+D:\Coding bootcamp apps and more\STS_workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1186501746.index
+2491499936.index
+246379512.index
+2272697252.index
+2431830422.index
+1498792819.index
+4280621313.index
+3352765248.index

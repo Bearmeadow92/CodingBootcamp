@@ -1,0 +1,8 @@
+package com.jessefletcher.sessionpost.controllers;
+
+public class MainController {
+	@RequestMapping("")
+	public String index() {
+		return "index.jsp";
+	}
+}

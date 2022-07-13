@@ -1,0 +1,5 @@
+package com.jesse.yogacourse.repositories;
+
+public interface UserRepository {
+
+}

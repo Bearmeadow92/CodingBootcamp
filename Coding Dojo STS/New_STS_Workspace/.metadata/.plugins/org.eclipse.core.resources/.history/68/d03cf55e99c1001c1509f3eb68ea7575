@@ -1,0 +1,5 @@
+package com.jesse.yogacourse.models;
+
+public class LoginUser {
+
+}

@@ -1,0 +1,5 @@
+package com.jessefletcher.omikujiform.controllers;
+
+public class MainController {
+
+}

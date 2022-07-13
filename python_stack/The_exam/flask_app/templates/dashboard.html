@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>index</title>
+
+<style>
+
+    .container{
+        padding: 15px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    .paintingslist{
+        margin-left: 25px;
+        justify-content: space-between;
+        padding: 50px;
+        border: solid black;
+        width: 450px;
+    }
+
+</style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome {{session['name']}}</h1> <a href="/painting/new">Add Painting</a> <a href="/logout">logout</a>
+    </div>
+    <div class="paintingslist"> 
+        <h3>Paintings:</h3>
+        <tbody>
+            {% for painting in paintings %}
+            <tr>
+                <td>
+                    <th>
+                    <a href="/painting/{{ painting.id }}">{{ painting.name }}</a>
+                    </th>
+                    <th>
+                    <p>By {{session['name']}}</p>
+                    </th>
+                    <th>
+                    <a href="/destroy/{{ painting.id }}">Delete</a> |
+                    </th>
+                    <th>
+                    <a href="/edit/{{ painting.id }}">Edit</a>
+                    </th>
+                </td>
+            </tr>
+            <div></div>
+            <div></div>
+            {% endfor %}
+        </tbody>
+    </div>
+
+            <!-- <tbody>
+            {% for painting in paintings %}
+
+            {% endfor %}
+        </tbody> -->
+</body>
+</html>

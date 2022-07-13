@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo_survey</title>
+</head>
+
+
+<style>
+
+.container{
+    border: solid black;
+    padding: 50px;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+#button{
+    margin-left: 213px;
+}
+
+</style>
+
+
+<body>
+    <div class="container">
+        <div>
+        <form action='/result', method="POST">
+            <label>Your Name:</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Dojo Locations:</label>
+            <select name="locations">
+                <option>San Jose</option>
+                <option>Seattle</option>
+                <option>Houston</option>
+            </select>
+        </div>
+        <div>
+            <label>Favorite Language:</label>
+            <select name="languages">
+                <option>Python</option>
+                <option>JavaScript</option>
+                <option>Java</option>
+                <option>C#</option>
+            </select>
+        </div>
+            <div>
+                <div>
+                    <label>Comment (optional):</label>
+                </div>
+                <textarea name="comment" cols="33" rows="10"></textarea>
+            </div>
+            <div id="button">
+                <button>Button</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

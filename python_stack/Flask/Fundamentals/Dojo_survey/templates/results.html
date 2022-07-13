@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+
+<style>
+
+table{
+    border: solid black;
+    padding: 50px;
+    margin-left: 110px;
+    margin-right: 110px;
+
+}
+body h1{
+    text-decoration: underline;
+}
+
+#button{
+    margin-left: 285px;
+}
+
+
+</style>
+
+
+
+
+<body>
+    <h1>Submitted Info</h1>
+    <table>
+            <tr>
+                <td>Name:</td>
+                <td>{{session["name"]}}</td>
+            </tr>
+            <tr>
+                <td>Dojo Location:</td>
+                <td>{{session["locations"]}}</td>
+            </tr>
+            <tr>
+                <td>Favorite Language:</td>
+                <td>{{session["languages"]}}</td>
+            </tr>
+            <tr>
+                <th>Comment:</th>
+                <td>{{session["comment"]}}</td>
+            </tr>
+            <tr>
+                <th>
+                    <div id="button">
+                        <button>Go back</button>
+                    </div>
+                </th>
+            </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Edit Painting</title>
+
+<style>
+    .logout{
+        margin-left: 600px;
+
+    }
+
+</style>
+
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}    
+    {% if messages %}                        
+        {% for message in messages %}     
+            <p>{{message}}</p>          
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div class="logout">
+<a href="/painting/new">Add Painting</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/logout">Logout</a>
+</div>
+<form action="/painting/update" method="post" class="col-6 mx-auto"> 
+    <input type="hidden" name="id" value = "{{paintings.id}}">
+    <input type="hidden" name="user_id" value = "{{session['user_id']}}" >
+    <h1 class="text-center" style="font-family:'Courier New', Courier, monospace">Edit a Painting</h1>
+    <div class="row">
+        <div class="col">
+            <h4>Title:</h4>
+            <input type="text" value="{{paintings.name}}" class="form-control" name = name>
+        </div>
+    </div>
+        <div class="form-floating">
+            <h4>Description:</h4>
+            <textarea class="form-control" name = "description" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">{{paintings.description}}</textarea>
+            <label for="floatingTextarea2"></label>
+        </div>
+            <h4>Price:</h4>
+            <input type="text" class="form-control" name = "price" value="{{paintings.price}}">
+        </div>
+    <input class="btn btn-primary" type="submit" value="Update">
+</form>
+
+
+</body>
+</html>

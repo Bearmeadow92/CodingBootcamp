@@ -1,0 +1,1 @@
+SELECT * FROM login_and_reg.users;
